@@ -1,0 +1,44 @@
+const data = [{
+    "title": "Frontend Development",
+    "tags": [
+        "HTML",
+        "CSS",
+        "Sass",
+        "ReactJs",
+        "GatsbyJs",
+        "NextJs",
+        "Tailwind-css",
+        "Material-UI",
+        "Bootstrap",
+        "Firebase",
+        "Vite",
+        "Figma",
+        "Canva"
+    ],
+    "icon": {
+        "asset": {
+            "url": "https://cdn.sanity.io/images/fxul9ln3/production/03a9f6fc484719e6ce9349f4a57aae9cb75bdcc9-600x600.svg"
+        }
+    }
+},
+{
+    "title": "MERN Stack Development",
+    "tags": [
+        "MongoDB",
+        "Express.js",
+        "React.js",
+        "Node.js",
+        "Typescript",
+        "Next.js",
+        "Stripe",
+        "REST APIs"
+    ],
+    "icon": {
+        "asset": {
+            "url": "https://cdn.sanity.io/images/fxul9ln3/production/3897e694afa2408fad52fcece9c1554294a3b7fd-2500x2500.svg"
+        }
+    }
+}
+];
+
+export default data;

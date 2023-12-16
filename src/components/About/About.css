@@ -1,0 +1,44 @@
+.mac-window-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* height: 100vh; */
+  width: 100%;
+}
+
+.mac-window {
+  border: 1px solid #ccc;
+  background-color: white;
+  width: 60%;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  overflow-x: auto; /* Add this to enable horizontal scrolling on smaller screens */
+}
+
+.mac-window-header {
+  display: flex;
+  justify-content: left;
+  color: #fff; /* Header text color */
+  padding: 2vh; /* Add padding for better aesthetics */
+}
+
+.mac-window-header-dot {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  margin-right: 4px;
+}
+
+.mac-window-content {
+  font-size: 2vh; /* Add this line to set the font size of the content */
+}
+
+/* Media query for smaller screens */
+@media (max-width: 600px) {
+  .mac-window {
+    width: 95% !important;
+    align-items: center;
+  }
+  .mac-window-content {
+    font-size: 2vh; /* Add this line to set the font size of the content */
+  }
+}
