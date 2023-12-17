@@ -17,16 +17,15 @@ const About = () => {
       "MUI, Bootstrap, Tailwind",
       "github, Gitlab, Docker",
     ],
+    experience: [
+      "6 month internship - Sciffer Analytics",
+      "1+ Year - Ignitarium Technology Pvt. Ltd.",
+    ],
 
     interest: ["Video Games", "Movies", "Traveling"],
   };
   return (
-    <section
-      data-aos="fade-left"
-      className="portfolio"
-      name="< About />"
-      id="about"
-    >
+    <section data-aos="fade-left" className="portfolio" name="about" id="about">
       <Heading text="< About />" style={{ padding: "3rem" }} />
       <div className="mac-window-container">
         <div className="mac-window">

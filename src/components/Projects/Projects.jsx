@@ -16,37 +16,16 @@ import { faUserLock } from "@fortawesome/free-solid-svg-icons/faUserLock"
 import PortfolioItem from "./PortfolioItem/PortfolioItem"
 
 import FoodieSearchThumbnail from '../../images/FoodieSearchAppThumbnail.png'
+import Ecom from '../../images/ECom.png'
 import userSearchThumbnail from '../../images/userSearchThumbnail.png'
 
-const Projects = ({ projects }) => {
-  const [selected, setSelected] = useState("featured")
+const Projects = ({  }) => {
+  const [selected, setSelected] = useState("frontend")
   const [data, setData] = useState([])
   const [projectList, setProjectList] = useState([])
 
-  useEffect(() => {
-    let tempList = []
-    projects.map(({ category }) => {
-      if (!tempList.includes(category)) {
-        tempList.push(category)
-      }
 
-      return null
-    })
-    setProjectList(tempList)
-  }, [projects])
-
-  useEffect(() => {
-    projectList.map((list) => {
-      if (selected === list) {
-        setData(projects.filter((project) => project.category === list))
-      }
-
-      return null
-    })
-  }, [selected, projectList, projects])
-
-
-   const ProjData = [
+  const ProjData = [
     {
     category: "frontend",
     liveUrl: "https://bharatmane15.github.io/github_user_search/",
@@ -64,9 +43,51 @@ const Projects = ({ projects }) => {
   id: 19,
   title: "Foodie Search",
   tagline: "Static Website"
-}
+},
+{
+  category: "ECom",
+  liveUrl: "private",
+  repositoryUrl: "private",
+  img: `${Ecom}`,
+  id: 19,
+  title: "Let’S Buy Shop",
+  tagline: "Ecommerce Website"
+},
+// {
+//   category: "Feature",
+//   liveUrl: "private",
+//   repositoryUrl: "private",
+//   img: `${Ecom}`,
+//   id: 19,
+//   title: "Let’S Buy Shop",
+//   tagline: "Ecommerce Website"
+// }
 ]
 
+  useEffect(() => {
+    let tempList = ProjData.reduce((acc, { category }) => {
+      if (!acc.includes(category)) {
+        acc.push(category);
+      }
+      return acc;
+    }, []);
+    setProjectList(tempList);
+  }, []);
+
+  useEffect(() => {
+    if (selected) {
+      setData(ProjData.filter((project) => project.category === selected));
+    } else {
+      setData(ProjData); // Reset to show all projects if nothing is selected
+    }
+  }, [selected]);
+
+
+  
+
+
+
+console.log("projectList",projectList);
   return (
     <section
       data-aos="fade-left"
@@ -75,8 +96,8 @@ const Projects = ({ projects }) => {
       id="projects"
     >
       <Heading text="< Projects />" style={{ padding: "3rem" }} />
-      {/* <div className="list">
-        {projectList &&
+      <div className="list">
+      {projectList &&
           projectList.map((list) => (
             <PortfolioItem
               title={list}
@@ -86,10 +107,10 @@ const Projects = ({ projects }) => {
               id={list}
             />
           ))}
-      </div> */}
+      </div>
       <div className="row">
-        {ProjData.length &&
-          ProjData.map((item, index) => (
+      {data.length &&
+          data.map((item, index) => (
             <div className="column" key={index}>
               <img src={item?.img} alt={item.title} />
               <div className="overlay">

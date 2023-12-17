@@ -20,11 +20,11 @@ const data = [
   {
     title: "MERN Stack Development",
     tags: [
-      "MongoDB",
-      "Express.js",
       "React.js",
       "Javascript",
       "Node.js",
+      "MongoDB",
+      "Express.js",
       "Typescript",
       "REST APIs",
     ],

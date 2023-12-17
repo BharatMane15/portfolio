@@ -40,31 +40,31 @@ const Home = () => {
         animate="animate"
       >
         <img style={{width:'15vh',height:'15vh',borderRadius:'50%', objectFit: 'cover',}} src={ProfileImg} alt="profile" />
-        <h2>Peace be upon you !</h2>
+        <h2>Hi there <span class="wave">👋</span></h2>
         <h1>I’m Bharat</h1>
         <p style={{ fontSize: "1.2rem ", fontWeight: "600" }}>
           I am a
           <span style={{ marginLeft: "8px" }}>
             <Typed
               strings={[
-                "Fullstack Engineer",
-                "React Js Developer",
+                "Programmer ",
+                "Web and App Developer",
               ]}
-              typeSpeed={60}
-              backSpeed={60}
+              typeSpeed={80}
+              backSpeed={80}
               loop
             />
           </span>
         </p>
         <Link
           // className="home-btn"
-          to={"portfolio"}
+          to={"projects"}
           hashSpy={true}
           spy={true}
           smooth={true}
           delay={100}
           offset={-100}
-          duration={500}
+          duration={1000}
         >
           <Button text={"See my work"} type="submit" />
         </Link>

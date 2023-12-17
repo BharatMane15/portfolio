@@ -6,8 +6,15 @@ import "./services.css";
 // Card
 import { ServicesCard } from "components/Services/ServicesCard/ServicesCard";
 import { Heading } from "components/Heading/Heading";
+import servicesData from '../../data'
 
-const Services = ({ services }) => {
+const Services = () => {
+  let tempServices = []
+servicesData.map((doc) => {
+    
+    return   tempServices.push(doc)
+  
+   })
   return (
     <section
       data-aos="fade-right"
@@ -17,8 +24,8 @@ const Services = ({ services }) => {
     >
       <Heading text="< Worked On />" />
       <div className="services-cards">
-        {services &&
-          services?.map(({ title, icon, tags }, index) => (
+        {tempServices &&
+          tempServices?.map(({ title, icon, tags }, index) => (
             <ServicesCard
               key={index}
               image={icon.asset.url}

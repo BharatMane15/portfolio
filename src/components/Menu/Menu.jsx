@@ -9,6 +9,11 @@ const Menu = ({ menuOpen, setMenuOpen }) => {
       <ul>
         <NavLink text="Home" path="home" onClick={() => setMenuOpen(false)} />
         <NavLink
+          text="About"
+          path="about"
+          onClick={() => setMenuOpen(false)}
+        />
+        <NavLink
           text="Skills"
           path="workedOn"
           onClick={() => setMenuOpen(false)}
